@@ -1,0 +1,22 @@
+@mixin clearfix() {
+	&::after{
+	content: "";
+	display: table;
+	clear: both;
+	}
+}
+@mixin no-list() {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+@mixin no-clearfix() {
+	&::after{
+	content: none;
+	display: none;
+	clear: none;
+	}
+}
+
+
+

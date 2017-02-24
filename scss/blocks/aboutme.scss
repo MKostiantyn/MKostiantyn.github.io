@@ -1,0 +1,46 @@
+.aboutme {
+	background-color: #fff;
+	color: #222;
+}
+.aboutme__wrapper {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+.aboutme__img-block {
+
+}
+.aboutme__img-wrapper {
+	text-align: center;
+}
+.aboutme__img {
+	border-radius: 50%;
+	width: 300px;
+	height: 300px;
+	@media (max-width: 768px) {
+		width: 200px;
+		height: 200px;
+	}	
+}
+.aboutme__text-block-wrapper {
+	display: table;	
+	min-height: 300px;
+	margin: 15px 0;
+	@media (max-width: 768px) {
+		text-align: center;
+		min-height: 200px
+	}
+}
+.aboutme__text-list {
+	display: table-cell;
+	vertical-align: middle;
+	@media (max-width: 768px) {
+		text-align: center;
+	}
+}
+.aboutme__text-item {
+	margin-top: 0;
+	font-size: 16px;
+	font-family: "open_sanslight", Arial, sans-serif;
+	line-height: 24px;
+	color: #222;
+}

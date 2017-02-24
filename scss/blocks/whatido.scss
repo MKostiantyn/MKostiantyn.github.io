@@ -1,0 +1,75 @@
+.whatido {
+	background-color: #f5f5f5;
+}
+.whatido__wrapper {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+}
+.whatido__item {
+	margin-top: 1.5rem;
+}
+.whatido__item-wrapper {
+	background-color: #fff;
+	padding: 3rem 1.4rem;
+	border-bottom: 1px solid #d4d4d4;
+}
+.whatido__item-icon-block {
+	margin-bottom: calc(31px + 2.4rem);
+}
+.whatido__item-icon {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	font-size: 10px;
+	&::after {
+		left: 50%;
+		top: 0;
+		transform: translateX(-50%);
+		position: absolute;
+		content: "";
+		vertical-align: middle;
+		display: inline-block;
+		background-image: url("../img/sprite.svg");
+		background-repeat: no-repeat;
+		background-size: 3.9em 24.3em;
+	}
+	&--pixel {
+		&::after {
+			background-position: 0em -16.8em;
+			width: 3.7em;
+			height: 3.1em;
+		}
+	}
+	&--bootstrap {
+		&::after {
+			background-position: 0em 0em;
+			width: 2.4031em;
+			height: 3.1em;
+		}
+	}
+	&--responsive {
+		&::after {
+			background-position: 0em -19.9em;
+			width: 1.8em;
+			height: 3.1em;
+		}
+	}
+	&--code {
+		&::after {
+			background-position: 0em -3.1em;
+			width: 3.9em;
+			height: 3.1em;
+		}
+	}
+}
+.whatido__item-text-block {
+	text-align: center;
+}
+.whatido__item-text {
+	margin: 0;
+	font-size: 14px;
+	font-family: "open_sanslight", Arial, sans-serif;
+	line-height: 20px;
+	color: #222;
+}
