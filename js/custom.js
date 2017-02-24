@@ -81,6 +81,7 @@ $(function() {
 
 
 		$('#js-menu').toggleClass('main-nav__list--active');
+		$('#js-main-nav').toggleClass('main-nav--toggle-open');
 
 	});
 
