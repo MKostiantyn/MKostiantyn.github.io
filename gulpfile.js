@@ -12,7 +12,8 @@ var gulp = require('gulp'),
 	pump = require('pump'),
 	server = require('browser-sync'),
 	svgSprite = require("gulp-svg-sprites"),
-	svgo = require('gulp-svgo');
+	svgo = require('gulp-svgo'),
+	concat = require('gulp-concat');
 
 gulp.task('sass', function () {
 	return gulp.src('scss/style.scss')
@@ -30,6 +31,14 @@ gulp.task('sass', function () {
 });
 
 
+gulp.task('concat', function() {
+	return gulp.src(['js/jquery.easypiechart.min.js','js/typed.min.js','js/wow.min.js'])
+
+	.pipe(concat('lib.min.js'))
+	.pipe(gulp.dest('js'));
+});
+
+
 gulp.task('js', function () {
 	return gulp.src('js/custom.js')
 
@@ -39,7 +48,6 @@ gulp.task('js', function () {
 	.pipe(gulp.dest('js'))
 	.pipe(server.stream());
 });
-
 
 
 
