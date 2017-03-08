@@ -5,6 +5,12 @@
 	padding-top: 5rem;
 	padding-bottom: 5rem;
 }
+.portfolio__title {
+  @extend .title-style;
+}
+.portfolio__item {
+  min-height: 231px;
+}
 .portfolio__item-wrapper {
 	width: 100%;
 	display: block;

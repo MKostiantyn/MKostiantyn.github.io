@@ -5,6 +5,9 @@
 	padding-top: 5rem;
 	padding-bottom: 5rem;
 }
+.whatido__title {
+  @extend .title-style;
+}
 .whatido__item {
 	margin-top: 1.5rem;
 }
@@ -14,53 +17,33 @@
 	border-bottom: 1px solid #d4d4d4;
 }
 .whatido__item-icon-block {
-	margin-bottom: calc(31px + 2.4rem);
+  width: 50px;
+  height: 50px;
+  margin: 0 auto calc(2.4rem) auto;
+  position: relative;
 }
 .whatido__item-icon {
-	display: block;
-	width: 100%;
-	height: 100%;
-	position: relative;
-	font-size: 10px;
-	&::after {
-		left: 50%;
-		top: 0;
-		transform: translateX(-50%);
-		position: absolute;
-		content: "";
-		vertical-align: middle;
-		display: inline-block;
-		background-image: url("../img/sprite.svg");
-		background-repeat: no-repeat;
-		background-size: 3.9em 24.3em;
-	}
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%,-50%);
+  	fill: #222;
+
 	&--pixel {
-		&::after {
-			background-position: 0em -16.8em;
-			width: 3.7em;
-			height: 3.1em;
-		}
+		width: 37px;
+		height: 31px;
 	}
 	&--bootstrap {
-		&::after {
-			background-position: 0em 0em;
-			width: 2.4031em;
-			height: 3.1em;
-		}
+		width: 24px;
+		height: 31px;
 	}
 	&--responsive {
-		&::after {
-			background-position: 0em -19.9em;
-			width: 1.8em;
-			height: 3.1em;
-		}
+		width: 18px;
+		height: 31px;
 	}
 	&--code {
-		&::after {
-			background-position: 0em -3.1em;
-			width: 3.9em;
-			height: 3.1em;
-		}
+		width: 39px;
+		height: 31px;
 	}
 }
 .whatido__item-text-block {
@@ -72,4 +55,7 @@
 	font-family: "open_sanslight", Arial, sans-serif;
 	line-height: 20px;
 	color: #222;
+}
+.whatido__text-title {
+  @extend .subtitle-style;
 }

@@ -1,0 +1,12 @@
+.page {
+  &__menu {
+	position: relative;
+	padding-top: 50px;
+  }
+  &__footer {
+	background: #222;
+	text-align: center;
+	padding: 5rem 0;
+	color: #FFF;
+  }
+}

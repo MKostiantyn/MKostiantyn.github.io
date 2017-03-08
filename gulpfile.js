@@ -12,8 +12,9 @@ var gulp = require('gulp'),
 	pump = require('pump'),
 	svgo = require('gulp-svgo'),
 	concat = require('gulp-concat'),
-	svgSymbols = require('gulp-svg-symbols'),
-	rsp = require('remove-svg-properties').stream;
+	svgstore = require('gulp-svgstore'),
+	server = require('browser-sync'),
+	cheerio = require('gulp-cheerio');
 
 	gulp.task('sass', function () {
 		return gulp.src('scss/style.scss')
@@ -75,7 +76,38 @@ var gulp = require('gulp'),
 
 	gulp.task('sprites', function () {
 		return gulp.src('svg/*.svg')
-		.pipe(svgo())
-		.pipe(svgSymbols())
+
+		.pipe(svgo({
+			plugins: [
+				{cleanupIDs: true},
+				{removeTitle: true},
+				{removeDimensions: true},
+				{removeViewBox: false},
+				{removeStyleElement: true},
+				// {cleanupListOfValues: {
+				//   floatPrecision: 0,
+				//   leadingZero: true,
+				//   defaultPx: true,
+				//   convertToPx: true
+				// }},
+				{removeAttrs: {attrs: ["data-name"]}}
+			]
+		}))
+		.pipe(rename({
+			prefix: "svg-icon__"
+		}))
+		.pipe(svgstore({fileName: "svg-sprite.svg", inlineSvg: true}))
+		.pipe(cheerio({
+			run:           function ($, file) {
+				$('svg').css('display', 'none');
+				$('[fill]').removeAttr('fill');
+				$('[fill-rule]').removeAttr('fill-rule');
+				$('[clip-rule]').removeAttr('clip-rule');
+			},
+			parserOptions: {xmlMode: true}
+		}))
+		.pipe(rename({
+			extname: ".html"
+		}))
 		.pipe(gulp.dest("svg"));
 	});

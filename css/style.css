@@ -387,7 +387,7 @@ body {
   color: #222;
   background-color: #ffffff; }
 
-.title {
+.title-style, .portfolio__title, .whatido__title, .skills__title, .aboutme__title {
   text-align: center;
   margin-top: 0;
   font-size: 2rem;
@@ -398,7 +398,7 @@ body {
   position: relative;
   padding-bottom: 3rem;
   margin-bottom: 3rem; }
-  .title::after {
+  .title-style::after, .portfolio__title::after, .whatido__title::after, .skills__title::after, .aboutme__title::after {
     position: absolute;
     content: "";
     width: 7rem;
@@ -408,7 +408,7 @@ body {
     left: 50%;
     transform: translateX(-50%); }
 
-.title-h3 {
+.subtitle-style, .whatido__text-title {
   margin: 0;
   margin-bottom: 1.7rem;
   color: #222;
@@ -416,6 +416,16 @@ body {
   font-size: 14px;
   font-family: "open_sansbold", Arial, sans-serif;
   letter-spacing: 1px; }
+
+.page__menu {
+  position: relative;
+  padding-top: 50px; }
+
+.page__footer {
+  background: #222;
+  text-align: center;
+  padding: 5rem 0;
+  color: #FFF; }
 
 .main-header {
   position: relative;
@@ -505,21 +515,21 @@ body {
   100% {
     transform: translateY(-7px); } }
 
-.main-header__scroll {
-  font-size: 10px;
-  vertical-align: middle;
-  display: inline-block;
-  background-image: url("../img/sprite.svg");
-  background-repeat: no-repeat;
-  background-size: 3.9em 24.3em;
-  background-position: 0em -12.7em;
-  width: 2.5em;
-  height: 4.0002em;
+.main-header__scroll-icon {
+  width: 25px;
+  height: 40px;
+  fill: #fff;
   animation: mouse 1.3s infinite; }
+
+.main-content {
+  position: relative; }
 
 .main-nav {
   background-color: #fff;
-  position: relative; }
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0; }
   .main-nav::after {
     position: absolute;
     content: "";
@@ -666,6 +676,9 @@ body {
   padding-top: 5rem;
   padding-bottom: 5rem; }
 
+.portfolio__item {
+  min-height: 231px; }
+
 .portfolio__item-wrapper {
   width: 100%;
   display: block; }
@@ -766,41 +779,29 @@ body {
   border-bottom: 1px solid #d4d4d4; }
 
 .whatido__item-icon-block {
-  margin-bottom: calc(31px + 2.4rem); }
+  width: 50px;
+  height: 50px;
+  margin: 0 auto calc(2.4rem) auto;
+  position: relative; }
 
 .whatido__item-icon {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  font-size: 10px; }
-  .whatido__item-icon::after {
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-    position: absolute;
-    content: "";
-    vertical-align: middle;
-    display: inline-block;
-    background-image: url("../img/sprite.svg");
-    background-repeat: no-repeat;
-    background-size: 3.9em 24.3em; }
-  .whatido__item-icon--pixel::after {
-    background-position: 0em -16.8em;
-    width: 3.7em;
-    height: 3.1em; }
-  .whatido__item-icon--bootstrap::after {
-    background-position: 0em 0em;
-    width: 2.4031em;
-    height: 3.1em; }
-  .whatido__item-icon--responsive::after {
-    background-position: 0em -19.9em;
-    width: 1.8em;
-    height: 3.1em; }
-  .whatido__item-icon--code::after {
-    background-position: 0em -3.1em;
-    width: 3.9em;
-    height: 3.1em; }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: #222; }
+  .whatido__item-icon--pixel {
+    width: 37px;
+    height: 31px; }
+  .whatido__item-icon--bootstrap {
+    width: 24px;
+    height: 31px; }
+  .whatido__item-icon--responsive {
+    width: 18px;
+    height: 31px; }
+  .whatido__item-icon--code {
+    width: 39px;
+    height: 31px; }
 
 .whatido__item-text-block {
   text-align: center; }
@@ -901,12 +902,6 @@ body {
   line-height: 24px;
   color: #222; }
 
-.main-footer {
-  background: #222;
-  text-align: center;
-  padding: 5rem 0;
-  color: #FFF; }
-
 .main-footer__social-list {
   margin: 0;
   padding: 0;
@@ -929,33 +924,29 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   position: relative; }
-  .main-footer__social-link::after {
-    font-size: 10px;
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.5;
-    background-image: url("../img/sprite.svg");
-    background-repeat: no-repeat;
-    background-size: 3.9em 24.3em; }
-  .main-footer__social-link--fb::after {
-    background-position: 0em -6.2em;
-    width: 0.7em;
-    height: 1.9em; }
-  .main-footer__social-link--github::after {
-    background-position: 0em -8.1em;
-    width: 1.9002em;
-    height: 1.9em; }
-  .main-footer__social-link--vk::after {
-    background-position: 0em -23em;
-    width: 2.1em;
-    height: 1.3em; }
   .main-footer__social-link:hover {
     border: 1px solid white; }
-    .main-footer__social-link:hover::after {
+    .main-footer__social-link:hover .main-footer__social-icon {
       opacity: 1; }
+
+.main-footer__social-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5; }
+  .main-footer__social-icon--fb {
+    width: 7px;
+    height: 19px;
+    fill: #fff; }
+  .main-footer__social-icon--github {
+    width: 19px;
+    height: 19px;
+    fill: #fff; }
+  .main-footer__social-icon--vk {
+    width: 21px;
+    height: 13px;
+    fill: #fff; }
 
 @keyframes heart {
   0% {
@@ -972,22 +963,20 @@ body {
   font-family: "open_sanslight", Arial, sans-serif;
   line-height: 18px;
   color: #fff; }
-  .main-footer__copyright-item:first-of-type {
-    padding-right: 42px;
-    position: relative; }
-    .main-footer__copyright-item:first-of-type::after {
-      font-size: 10px;
-      position: absolute;
-      content: "";
-      background-image: url("../img/sprite.svg");
-      background-repeat: no-repeat;
-      background-size: 3.9em 24.3em;
-      top: -25%;
-      right: 3%;
-      background-position: 0em -10em;
-      width: 2.8001em;
-      height: 2.6003em;
-      animation: heart 1.3s infinite; }
+
+.main-footer__copyright-icon-block {
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin: -5px 5px 0 5px; }
+
+.main-footer__copyright-icon--heart {
+  width: 28px;
+  height: 26px;
+  fill: #ff5252;
+  animation: heart 1.3s infinite; }
 
 .animated {
   animation-duration: 1s;

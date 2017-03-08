@@ -5,6 +5,9 @@
 	padding-top: 5rem;
 	padding-bottom: 5rem;
 }
+.skills__title {
+  @extend .title-style;
+}
 .skills__title-text {
 	margin-top: 0;
 	margin-bottom: 3rem;

@@ -84,15 +84,9 @@
 	50% { transform: translateY(7px) }
 	100% { transform: translateY(-7px) }
 }
-.main-header__scroll {
-	font-size: 10px;
-	vertical-align: middle;
-	display: inline-block;
-	background-image: url("../img/sprite.svg");
-	background-repeat: no-repeat;
-	background-size: 3.9em 24.3em;
-	background-position: 0em -12.7em;
-	width: 2.5em;
-	height: 4.0002em;
+.main-header__scroll-icon {
+	width: 25px;
+	height: 40px;
+    fill: #fff;
 	animation: mouse 1.3s infinite;
 }

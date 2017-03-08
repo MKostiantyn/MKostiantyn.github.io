@@ -1,8 +1,4 @@
 .main-footer {
-	background: #222;
-	text-align: center;
-	padding: 5rem 0;
-	color: #FFF;
 }
 .main-footer__social-list {
 	@include no-list();
@@ -25,45 +21,35 @@
 	border: 1px solid rgba(255, 255, 255, 0.5);
 	border-radius: 50%;
 	position: relative;
-	&::after {
-		font-size: 10px;
-		position: absolute;
-		content: "";
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		opacity: 0.5;
-		background-image: url("../img/sprite.svg");
-		background-repeat: no-repeat;
-		background-size: 3.9em 24.3em;
-	}
-	&--fb {
-		&::after {
-			background-position: 0em -6.2em;
-			width: 0.7em;
-			height: 1.9em;
-		}
-	}
-	&--github {
-		&::after {
-			background-position: 0em -8.1em;
-			width: 1.9002em;
-			height: 1.9em;
-		}
-	}
-	&--vk {
-		&::after {
-			background-position: 0em -23em;
-			width: 2.1em;
-			height: 1.3em;
-		}
-	}
 	&:hover {
 		border: 1px solid rgb(255, 255, 255);
-		&::after {
+		& .main-footer__social-icon {
 			opacity: 1;
 		}
 	}
+}
+.main-footer__social-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0.5;
+
+  &--fb {
+	width: 7px;
+	height: 19px;
+	fill: #fff;
+  }
+  &--github {
+	width: 19px;
+	height: 19px;
+	fill: #fff;
+  }
+  &--vk {
+	width: 21px;
+	height: 13px;
+	fill: #fff;
+  }
 }
 @keyframes heart {
 	0% {
@@ -75,7 +61,6 @@
 	100% {
 		transform: scale(1.2);
 	}
-
 }
 .main-footer__copyright-item {
 	display: inline-block;
@@ -84,22 +69,21 @@
 	font-family: "open_sanslight", Arial, sans-serif;
 	line-height: 18px;
 	color: #fff;
-	&:first-of-type {
-		padding-right: 42px;
-		position: relative;
-		&::after {
-			font-size: 10px;
-			position: absolute;
-			content: "";
-			background-image: url("../img/sprite.svg");
-			background-repeat: no-repeat;
-			background-size: 3.9em 24.3em;
-			top: -25%;
-			right: 3%;
-			background-position: 0em -10em;
-			width: 2.8001em;
-			height: 2.6003em;
-			animation: heart 1.3s infinite;
-		}
-	}
+}
+.main-footer__copyright-icon-block {
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  margin: -5px 5px 0 5px;
+}
+.main-footer__copyright-icon {
+  &--heart {
+	width: 28px;
+	height: 26px;
+	fill: #ff5252;
+	animation: heart 1.3s infinite;
+  }
+
 }

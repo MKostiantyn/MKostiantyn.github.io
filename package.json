@@ -11,6 +11,7 @@
     "autoprefixer": "^6.5.4",
     "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
+    "gulp-cheerio": "^0.6.2",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^2.0.0",
     "gulp-imagemin": "^3.1.1",
@@ -18,11 +19,12 @@
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^6.2.0",
     "gulp-sass": "^2.3.2",
-    "gulp-svg-symbols": "^2.0.2",
     "gulp-svgo": "^1.0.3",
+    "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^2.0.1",
-    "pump": "^1.0.2",
-    "remove-svg-properties": "^0.3.3"
+    "install": "^0.8.7",
+    "npm": "^4.3.0",
+    "pump": "^1.0.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

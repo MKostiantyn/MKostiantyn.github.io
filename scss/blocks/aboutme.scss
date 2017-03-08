@@ -6,6 +6,9 @@
 	padding-top: 5rem;
 	padding-bottom: 5rem;
 }
+.aboutme__title  {
+  @extend .title-style;
+}
 .aboutme__img-block {
 
 }
