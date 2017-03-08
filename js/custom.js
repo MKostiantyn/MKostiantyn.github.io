@@ -1,7 +1,7 @@
-$('#js-main-nav').ready( function () {
+$(function() {
 
 	var headerH = $('#js-header').height(),
-		thisBlock = $(this),
+		thisBlock = $('#js-main-nav'),
 		windowScrollH = $(window).scrollTop();
 
 	if( windowScrollH >= headerH ) {
@@ -83,7 +83,7 @@ $(function() {
 		e.preventDefault();
 
 		var currentBlock = $(this).attr('href'),
-			currentMenuHeight = $('#js-main-nav').height();
+			currentMenuHeight = $('#js-toggle').height();
 			currentBlockOffset = $(currentBlock).offset().top - currentMenuHeight;
 
 		$('html, body').animate({
