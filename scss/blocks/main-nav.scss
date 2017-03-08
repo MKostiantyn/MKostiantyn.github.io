@@ -73,10 +73,10 @@
 		padding: 0;
 		padding: 0 15px;
 		outline: none;
-		&:hover {
+		&--hover {
 			background-color: #f5f5f5;
 		}
-		&:hover .main-nav__toggle-icon{
+		&--hover .main-nav__toggle-icon {
 			background-color: #ff5252;
 		}
 	}	

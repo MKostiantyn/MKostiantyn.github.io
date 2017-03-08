@@ -97,7 +97,7 @@ $(function() {
 
 		e.preventDefault();
 
-
+		$(this).toggleClass('main-nav__toggle-block--hover');
 		$('#js-menu').toggleClass('main-nav__list--active');
 		$('#js-main-nav').toggleClass('main-nav--toggle-open');
 
@@ -112,6 +112,7 @@ $(function() {
 		$('#js-menu').removeClass('main-nav__list--active');
 
 	});
+
 
 });
 
