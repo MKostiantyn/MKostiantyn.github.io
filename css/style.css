@@ -408,7 +408,7 @@ body {
     left: 50%;
     transform: translateX(-50%); }
 
-.subtitle-style, .whatido__text-title {
+.subtitle-style, .whatido__text-title, .skills__list-title {
   margin: 0;
   margin-bottom: 1.7rem;
   color: #222;

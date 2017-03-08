@@ -17,6 +17,9 @@
 	line-height: 24px;
 	color: #222;
 }
+.skills__list-title {
+  @extend .subtitle-style;
+}
 .chart-wrapper {
 	text-align: center;
 	width: 120px;
