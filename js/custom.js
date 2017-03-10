@@ -110,6 +110,7 @@ $(function() {
 
 
 		$('#js-menu').removeClass('main-nav__list--active');
+		$('#js-toggle').toggleClass('main-nav__toggle-block--hover');
 
 	});
 
