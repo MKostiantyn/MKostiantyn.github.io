@@ -1,0 +1,112 @@
+.main-nav {
+    display: flex;
+    padding: 35px 0;
+    justify-content: center;
+    align-content: stretch;
+    position: relative;
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 0;
+    }
+    &__list {
+        @include no-list();
+        display: flex;
+        align-items: center;
+        @media (max-width: 768px) {
+            display: none;
+            flex-direction: column;
+            background-color: $bg-color;
+            margin: 0 -15px;
+            padding-bottom: 20px;
+            &--active {
+                display: flex;
+                &:first-of-type {
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: 75px;
+            @media (max-width: 768px) {
+                margin-right: 0px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__link {
+        font-size: 13px;
+        color: $menu-color;
+        text-transform: uppercase;
+        font-family: "latobold", Arial, sans-serif;
+        &:hover {
+            color: $hover-color;
+            text-decoration: none;
+        }
+    }
+    &__logo-block {
+        margin: 0 65px;
+        font-size: 0;
+        @media (max-width: 768px) {
+            order: 1;
+            margin: 15px auto;
+        }
+    }
+    &__logo-link {
+        display: block;
+    }
+    &__toggle-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 50px;
+        height: 54px;
+        position: absolute;
+        top: 0;
+        right: 18px;
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        &--active {
+            top: 180px;
+        }
+        @media (min-width: 769px) {
+            display: none;
+        }
+    }
+    &__toggle-item {
+        width: 24px;
+        height: 3px;
+        border-radius: 2px;
+        opacity: 1;
+        position: relative;
+        top: 0;
+        background-color: $bg-second-color;
+        transition: transform 500ms, opacity 50ms, top 500ms;
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+        &--active {
+            &:first-child {
+                top: 8px;
+                transform: rotate(45deg);
+            }
+        }
+        &--active {
+            &:nth-child(2) {
+                opacity: 0;
+            }
+        }
+        &--active {
+            &:last-child {
+                transform: rotate(-45deg);
+                position: relative;
+                top: -8px;
+            }
+        }
+    }
+}

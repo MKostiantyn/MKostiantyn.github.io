@@ -1,0 +1,89 @@
+.info-block {
+    text-align: center;
+    &__title {
+        margin: 0;
+        padding: 0;
+        padding-top: 70px;
+        position: relative;
+        font-size: 18px;
+        font-family: "latobold", Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        color: $main-color;
+        letter-spacing: 0.2em;
+        max-width: 1000px;
+        margin: 0 auto;
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url(../img/spritesheet.png);
+            background-repeat: no-repeat;
+        }
+        &--chain {
+            &::after {
+                width: 52px;
+                height: 43px;
+                background-position: -400px -3px;
+            }
+        }
+        &--frame {
+            &::after {
+                width: 41px;
+                height: 30px;
+                background-position: -163px -52px;
+            }
+        }
+        &--wheel {
+            &::after {
+                width: 32px;
+                height: 32px;
+                background-position: -400px -132px
+            }
+        }
+        &--plug {
+            &::after {
+                width: 23px;
+                height: 41px;
+                background-position: -179px -3px;
+            }
+        }
+    }
+    &__text {
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+        line-height: 24px;
+        color: $main-second-color;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    &--inner {
+        padding: 35px 0;
+        & .info-block__title {
+            &::after {
+                top: 15px;
+            }
+        }
+        & .info-block__text {
+            font-size: 13px;
+            line-height: 20px;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                height: 1px;
+                width: 50px;
+                background-color: rgba($main-color, 0.2);
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}

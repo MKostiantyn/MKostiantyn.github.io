@@ -10,3 +10,12 @@ Thumbs.db
 *.ai
 *.pdf
 *.doc
+*/**/.idea/
+*/**/node_modules/
+*/**/bower_components/
+*/**/.vscode
+projects/*/**/package.json
+projects/*/**/gulpfile.js
+projects/*/**/.gitignore
+projects/*/**/bower.json
+projects/*/**/debug.log

@@ -1,0 +1,43 @@
+.comments {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    max-width: 1000px;
+    &__title {
+        font-style: normal;
+        letter-spacing: 0.1em;
+        margin-bottom: 30px;
+        display: inline-block;
+        vertical-align: baseline;
+    }
+    &__link {
+        color: $main-color;
+        font-family: "latobold", Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        &:hover {
+            color: $hover-color;
+        }
+    }
+    &__title-inner {
+        font-family: "latolight";
+        display: inline-block;
+        vertical-align: baseline;
+        padding-left: 35px;
+        position: relative;
+        color: $main-second-color;
+        &::after {
+            position: absolute;
+            content: "/";
+            left: 16px;
+            top: 0;
+        }
+    }
+    &__text {
+        margin: 0;
+        margin-bottom: 60px;
+        font-size: 18px;
+        line-height: 1.4;
+        font-family: "latoitalic";
+        color: $main-second-color;
+    }
+}

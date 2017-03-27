@@ -1,0 +1,78 @@
+.footer {
+    @extend .page__inner;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $bg-color;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+    &__item {
+        @media (max-width: 768px) {
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+            text-align: center;
+        }
+        &--handmade {
+            display: flex;
+            align-items: center;
+        }
+        span {
+            font-family: "latoitalic";
+        }
+        &--social {
+            display: flex;
+            align-items: center;
+        }
+        &-title {
+            font-weight: bold;
+            font-size: 14px;
+            margin: 0;
+            color: $main-second-color;
+        }
+        &-text {
+            font-family: "latoitalic";
+            color: $main-second-color;
+            font-size: 13px;
+            margin: 0;
+        }
+        &-icon {
+            background: url("../img/spritesheet.png");
+            background-repeat: no-repeat;
+            display: block;
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+            &--tw {
+                width: 35px;
+                height: 34px;
+                background-position: -400px -92px;
+            }
+            &--fb {
+                width: 35px;
+                height: 34px;
+                background-position: -122px -52px;
+            }
+            &--pin {
+                width: 35px;
+                height: 34px;
+                background-position: -400px -52px;
+            }
+        }
+    }
+    &__link {
+        margin-left: 15px;
+        display: block;
+        width: 38px;
+        height: 24px;
+        &:hover .footer__svg {
+            fill: $hover-color;
+        }
+    }
+    &__svg {
+        fill: $main-second-color;
+        transition: fill 500ms;
+    }
+}

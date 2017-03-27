@@ -1,0 +1,22 @@
+.page {
+    &__row {
+        &--grey {
+            background-color: $bg-color;
+        }
+    }
+    &__inner {
+        padding: 50px 0;
+        @media (min-width: 768px) {
+            padding: 115px 0;
+        }
+    }
+    &__comments {
+        & *:focus {
+            outline: none;
+        }
+    }
+    &__input {
+        max-width: 280px;
+        width: 100%;
+    }
+}

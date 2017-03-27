@@ -1,0 +1,21 @@
+.discover {
+    @extend .page__inner;
+    background-color: #282f35;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    &__btn {
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 15px 55px;
+        border: 1px solid $bg-second-color;
+        background: transparent;
+        font-weight: 700;
+        color: $bg-second-color;
+        transition: background 500ms;
+        &:hover {
+            background: $main-second-color;
+            border-color: $main-second-color;
+        }
+    }
+}

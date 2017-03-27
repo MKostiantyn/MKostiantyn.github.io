@@ -1,0 +1,69 @@
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+    &__col {
+        display: flex;
+    }
+    &__inner-col {}
+    &__row {
+        display: flex;
+        height: 50%;
+    }
+    &__sub-inner-col {
+        width: 50%;
+    }
+    &__link-shop {
+        position: absolute;
+        display: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding-top: 40px;
+        text-transform: uppercase;
+        color: #fff;
+        z-index: 10;
+        font-family: "latobold", Arial, Helvetica, sans-serif;
+        &::after {
+            width: 51px;
+            height: 30px;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            content: "";
+            background-image: url("../img/SHOP-NOW.png");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+    &__link {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba(#64c29e, 0.8);
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        &:hover::after,
+        &:hover &-shop {
+            display: block;
+            white-space: nowrap;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
